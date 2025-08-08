@@ -8,19 +8,24 @@ const Bio = () => {
         <div className="bio-content">
           <div className="bio-text">
             <p>
-              I'm a passionate Computer Engineer with a strong foundation in software development, 
-              system design, and emerging technologies. With experience in full-stack development, 
-              I enjoy creating efficient, scalable solutions that solve real-world problems.
+              I'm a Computer Engineering student at Virginia Tech with a passion for bridging the gap 
+              between hardware and software through innovative design solutions. My experience spans 
+              from PCB design and embedded systems to full-stack web development, allowing me to 
+              tackle complex technical challenges from multiple angles.
             </p>
             <p>
-              My journey in computer engineering has led me through various domains including 
-              web development, mobile applications, and system architecture. I'm constantly 
-              learning and adapting to new technologies to stay at the forefront of innovation.
+              Currently, I lead the controls team for VT BOLT, where I design battery management 
+              systems and testing equipment for our electric motorcycle that competes in national 
+              competitions. I also contributed to UAV simulation research with Virginia Tech's 
+              National Security Institute, developing AI-enhanced drone environments using MATLAB 
+              and Python.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new frameworks, contributing to 
-              open-source projects, or mentoring fellow developers. I believe in the power of 
-              collaboration and continuous learning.
+              My hands-on approach to learning has taken me from high school robotics competitions 
+              to university research teams, where I've developed expertise in schematic design, 
+              3D printing, and programming in multiple languages. I thrive in collaborative 
+              environments where I can combine technical innovation with practical problem-solving 
+              to create meaningful impact.
             </p>
           </div>
         </div>
