@@ -1,14 +1,33 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, onNavigate }) => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('ProjectCard clicked!');
+    console.log('Project link:', project.link);
+    console.log('onNavigate function:', onNavigate);
+    
+    if (onNavigate && typeof onNavigate === 'function') {
+      console.log('Calling onNavigate with:', project.link);
+      onNavigate(project.link);
+    } else {
+      console.error('onNavigate is not a function or is undefined');
+    }
+  };
+
   return (
-    <div className="project-card">
+    <div className="project-card" onClick={handleClick} style={{ cursor: 'pointer' }}>
       <div className="project-image">
         <div className="project-overlay">
-          <a href={project.link} className="project-link">
+          <button
+            className="project-link"
+            onClick={handleClick}
+            type="button"
+          >
             <ExternalLink />
-          </a>
+          </button>
         </div>
       </div>
       <div className="project-content">

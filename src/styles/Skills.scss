@@ -1,0 +1,107 @@
+@import "variables";
+
+// Skill Card
+.title {
+  text-align: center;       // centers the text
+  font-size: 8vw;           // large on mobile
+  margin: 4vh auto;         // top/bottom spacing and center horizontally
+  font-weight: bold;        // makes it stand out
+
+  @media (min-width: 768px) {
+    font-size: 2.5rem;      // large but more reasonable on desktop
+    margin: 2rem auto;
+  }
+}
+
+.skill-card {
+  background: $card-bg;
+  padding: 6vw;
+  border-radius: 4vw;
+  border: 1px solid $border;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2vh;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+    border-radius: 12px;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.2);
+  }
+
+  h3 {
+    color: $accent;
+    margin-bottom: 6vw;
+    font-size: 5vw;
+
+    @media (min-width: 768px) {
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+    gap: 4vw;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+    }
+  }
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4vw;
+    background: $secondary-bg;
+    border-radius: 3vw;
+    transition: transform 0.2s ease;
+
+    @media (min-width: 768px) {
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .skill-logo {
+      margin-bottom: 2vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (min-width: 768px) {
+        margin-bottom: 0.5rem;
+      }
+
+      .skill-image {
+        // Set a consistent height and let width adjust proportionally
+        height: 48px;
+        width: auto;
+        object-fit: contain;
+
+        @media (max-width: 767px) {
+          height: 8vw;
+          width: auto;
+        }
+      }
+    }
+
+    span {
+      font-size: 3vw;
+      color: $text-secondary;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

@@ -1,7 +1,30 @@
 import React from 'react';
 import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 
+const ObfuscatedMailtoLink = ({ user, domain, children }) => {
+  const email = `${user}@${domain}`;
+  const mailtoLink = `mailto:${email}`;
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    window.location.href = mailtoLink;
+  };
+
+  return (
+    <a 
+      href="#" 
+      onClick={handleClick} 
+      title={`Email ${email}`}
+    >
+      {children || email}
+    </a>
+  );
+};
+
 const Footer = () => {
+  const emailUser = "alexander.j.bloom925";
+  const emailDomain = "gmail.com";
+
   return (
     <footer id="contact" className="footer">
       <div className="container">
@@ -15,7 +38,9 @@ const Footer = () => {
             <div className="contact-info">
               <div className="contact-item">
                 <Mail className="contact-icon" />
-                <span>alexander.j.bloom925@gmail.com</span>
+                <ObfuscatedMailtoLink user={emailUser} domain={emailDomain}>
+                  <span>{`${emailUser}@${emailDomain}`}</span>
+                </ObfuscatedMailtoLink>
               </div>
               <div className="contact-item">
                 <Phone className="contact-icon" />
@@ -32,9 +57,9 @@ const Footer = () => {
               <a href="https://linkedin.com/in/alexander-bloom-359673289/" className="social-link">
                 <Linkedin />
               </a>
-              <a href="mailto:alexander.j.bloom925@gmail.com" className="social-link">
+              <ObfuscatedMailtoLink user={emailUser} domain={emailDomain}>
                 <Mail />
-              </a>
+              </ObfuscatedMailtoLink>
             </div>
           </div>
         </div>

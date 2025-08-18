@@ -1,0 +1,75 @@
+@import "variables";
+
+// Bio Section
+.bio {
+  padding: 20vw 0;
+  background: $secondary-bg;
+  
+  @media (min-width: 768px) {
+    padding: 100px 0;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 8vw;
+    margin-bottom: 8vw;
+    color: $accent;
+    
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+  
+  .bio-content {
+    max-width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack items vertically by default */
+    
+    @media (min-width: 800px) {
+      max-width: auto;
+      flex-direction: row; /* Switch to row layout on larger screens */
+      gap: 2rem;
+      align-items: center;
+    }
+  }
+  
+  .bio-image {
+    order: -1; /* Moves the image before the text on smaller screens */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4vw; /* Add some space between the image and text on mobile */
+
+    img {
+      max-width: 80%; /* Adjust as needed for mobile */
+      height: auto;
+      border-radius: 8px;
+    }
+
+    @media (min-width: 768px) {
+      order: 0; /* Revert to default order on larger screens */
+      margin-bottom: 0;
+      flex: 1;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  
+  .bio-text {
+    flex: 1;
+    p {
+      font-size: 4vw;
+      margin-bottom: 6vw;
+      color: $text-secondary;
+      line-height: 1.6;
+      
+      @media (min-width: 768px) {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+      }
+    }
+  }
+}

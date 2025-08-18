@@ -6,9 +6,6 @@ const Bio = () => {
       <div className="container">
         <h2>About Me</h2>
         <div className="bio-content">
-          <div className="bio-image">
-            <img src="https://via.placeholder.com/300" alt="Placeholder Bio Image" />
-          </div>
           <div className="bio-text">
             <p>
               I'm a Computer Engineering student at Virginia Tech with a passion for bridging the gap 
@@ -17,12 +14,9 @@ const Bio = () => {
               tackle complex technical challenges from multiple angles.
             </p>
             <p>
-              Currently, I am a junior lead on the controls team for VT BOLT, where I design battery management 
+              Currently, I lead the controls team for VT BOLT, where I design battery management 
               systems and testing equipment for our electric motorcycle that competes in national 
-              competitions.
-            </p>
-            <p>
-              Previously, I contributed to UAV simulation research with Night's Watch at Virginia Tech's 
+              competitions. I also contributed to UAV simulation research with Virginia Tech's 
               National Security Institute, developing AI-enhanced drone environments using MATLAB 
               and Python.
             </p>

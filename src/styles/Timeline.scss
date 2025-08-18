@@ -1,0 +1,190 @@
+@import "variables";
+
+/* Timeline Styles */
+.timeline-title {
+    margin-bottom: 20vh;
+}
+
+@media (max-width: 768px) {
+    .timeline-title {
+        margin-bottom: 0;
+    }
+}
+
+.timeline-container {
+  font-family: 'Inter', sans-serif;
+  color: $text-primary;
+  padding: 40px 20px;
+  background: linear-gradient(67deg, $primary-bg 0%, $accent 400%);
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  // Top line
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, transparent 0%, $text-primary 50%, transparent 100%);
+  }
+
+  // Bottom line
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, transparent 0%, $text-primary 50%, transparent 100%);
+  }
+
+  // Triggered only when onscreen
+  &.animate-lines {
+    &::before {
+      animation: expandLine 1s ease-out forwards;
+    }
+    &::after {
+      animation: expandLine 1s ease-out forwards;
+      animation-delay: 0.3s;
+    }
+  }
+}
+
+/* Wrapper for the timeline itself */
+.timeline-wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  user-select: none;
+}
+
+/* The main horizontal line */
+.main-line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 4px;
+  background-color: $text-primary;
+  border-radius: 2px;
+  z-index: 1;
+}
+
+/* Wrapper for a single event, positioned dynamically */
+.event-wrapper {
+  position: absolute;
+  left: 50%; /* Default center alignment */
+  transform: translateX(-50%);
+}
+
+/* The vertical line connecting the card to the main line */
+.vertical-connector {
+  position: absolute;
+  width: 2px;
+  background-color: $text-primary;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.vertical-connector.top {
+  bottom: 100%;
+  height: 50px;
+}
+
+.vertical-connector.bottom {
+  top: 100%;
+  height: 50px;
+}
+
+/* The event card */
+.event-card {
+  position: absolute;
+  width: 250px;
+  background-color: $card-bg;
+  border: 1px solid $border;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 6px $accent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 3;
+  text-align: center;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px $accent-hover;
+}
+
+/* Position cards based on top/bottom row */
+.event-card.top {
+  bottom: calc(100% + 50px);
+}
+
+.event-card.bottom {
+  top: calc(100% + 50px);
+}
+
+.event-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: $text-primary;
+}
+
+.event-company {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 8px 0;
+  color: #7f8c8d;
+}
+
+.event-dates {
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 0;
+  color: $text-secondary;
+}
+
+@media (max-width: 768px) {
+  .timeline-wrapper {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .main-line {
+    display: none;
+  }
+  .event-wrapper {
+    position: relative;
+    transform: none;
+    left: auto !important;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .vertical-connector {
+    display: none;
+  }
+  .event-card {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+  }
+}

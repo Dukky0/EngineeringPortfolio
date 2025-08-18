@@ -8,7 +8,7 @@ const SkillCard = ({ category, skills }) => {
         {skills.map((skill, index) => (
           <div key={index} className="skill-item">
             <div className="skill-logo">
-              <img src={skill.logo} alt={`${skill.name} logo`} className='skill-image'/>
+              {skill.logo}
             </div>
             <span>{skill.name}</span>
           </div>
