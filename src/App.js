@@ -9,7 +9,6 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 import BatteryTestbenchProject from './projects/BatteryTestbench';
 import BOLTWikiProject from './projects/BoltWiki';
-
 import './styles/App.scss';
 import './styles/Hero.scss';
 import './styles/Global.scss';
@@ -21,18 +20,22 @@ import './styles/Timeline.scss';
 // Home page component
 const HomePage = () => {
   const navigate = useNavigate();
-  
+ 
   const navigateToPage = (page) => {
     navigate(`/${page}`);
+    // Scroll to top when navigating
+    window.scrollTo(0, 0);
   };
 
   return (
     <>
+      <NavbarWithRouter />
       <Hero />
       <Bio />
       <Skills />
       <Timeline />
       <Projects onNavigate={navigateToPage} />
+      <Footer />
     </>
   );
 };
@@ -40,13 +43,15 @@ const HomePage = () => {
 // Project wrapper components that handle navigation
 const BatteryTestbenchPage = () => {
   const navigate = useNavigate();
-  
+ 
   const navigateToPage = (page) => {
     if (page === 'home') {
       navigate('/');
     } else {
       navigate(`/${page}`);
     }
+    // Scroll to top when navigating
+    window.scrollTo(0, 0);
   };
 
   return <BatteryTestbenchProject onNavigate={navigateToPage} />;
@@ -54,13 +59,15 @@ const BatteryTestbenchPage = () => {
 
 const BOLTWikiPage = () => {
   const navigate = useNavigate();
-  
+ 
   const navigateToPage = (page) => {
     if (page === 'home') {
       navigate('/');
     } else {
       navigate(`/${page}`);
     }
+    // Scroll to top when navigating
+    window.scrollTo(0, 0);
   };
 
   return <BOLTWikiProject onNavigate={navigateToPage} />;
@@ -69,13 +76,15 @@ const BOLTWikiPage = () => {
 // Updated Navbar that works with React Router
 const NavbarWithRouter = () => {
   const navigate = useNavigate();
-  
+ 
   const navigateToPage = (page) => {
     if (page === 'home') {
       navigate('/');
     } else {
       navigate(`/${page}`);
     }
+    // Scroll to top when navigating
+    window.scrollTo(0, 0);
   };
 
   return <Navbar onNavigate={navigateToPage} />;
@@ -85,17 +94,13 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <NavbarWithRouter />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/battery-testbench" element={<BatteryTestbenchPage />} />
-            <Route path="/bolt-wiki" element={<BOLTWikiPage />} />
-            {/* Add a catch-all route for 404s */}
-            <Route path="*" element={<HomePage />} />
-          </Routes>
-        </main>
-        <Footer />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/battery-testbench" element={<BatteryTestbenchPage />} />
+          <Route path="/bolt-wiki" element={<BOLTWikiPage />} />
+          {/* Add a catch-all route for 404s */}
+          <Route path="*" element={<HomePage />} />
+        </Routes>
       </div>
     </Router>
   );
