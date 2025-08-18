@@ -16,17 +16,17 @@ const eventsData = [
     description: 'NA'
   },
   {
-    title: 'Junior Controls Lead',
-    company: 'Creative Labs',
-    startDate: '2025-05-25',
-    endDate: 'Present',
-    description: 'NA'
-  },
-  {
     title: 'Simulation Design Team',
     company: 'Hume Research Center',
     startDate: '2024-10-10',
     endDate: '2025-05-25',
+    description: 'NA'
+  },
+  {
+    title: 'Junior Controls Lead',
+    company: 'Creative Labs',
+    startDate: '2025-05-25',
+    endDate: 'Present',
     description: 'NA'
   },
 ];
