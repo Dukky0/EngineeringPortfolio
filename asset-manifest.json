@@ -1,15 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.9b3eedd2.css",
-    "main.js": "/static/js/main.d170a5dd.js",
-    "static/js/453.ad7768ec.chunk.js": "/static/js/453.ad7768ec.chunk.js",
+    "main.css": "/static/css/main.345c36fb.css",
+    "main.js": "/static/js/main.a5d22abf.js",
+    "static/js/453.eb941e0b.chunk.js": "/static/js/453.eb941e0b.chunk.js",
+    "static/media/cpp.png": "/static/media/cpp.b42742fda7194fb4eef2.png",
+    "static/media/react.png": "/static/media/react.bafc2a1dcbb5c8d3aefc.png",
+    "static/media/docker.webp": "/static/media/docker.4765472b3df4e22e4da3.webp",
+    "static/media/node.png": "/static/media/node.c0b0caf901d25f415541.png",
+    "static/media/css.png": "/static/media/css.e8e133cfdfaba93cb776.png",
+    "static/media/express.png": "/static/media/express.fe1eec364f69de4ba3f1.png",
+    "static/media/javascript.png": "/static/media/javascript.72a8e5c0e426502d907a.png",
+    "static/media/java.png": "/static/media/java.6814a1e33a897535b1f5.png",
+    "static/media/altium.webp": "/static/media/altium.9561704a6ddc0d1f1dde.webp",
+    "static/media/scss.png": "/static/media/scss.b1789f6448a5bae26264.png",
+    "static/media/python.png": "/static/media/python.4859f801ae28a9ef09f8.png",
+    "static/media/html.png": "/static/media/html.433fda35ec3b24cb2a74.png",
+    "static/media/fusion.webp": "/static/media/fusion.defb78d9506016597c96.webp",
+    "static/media/autocad.svg": "/static/media/autocad.e3c8fb7d3791fa6681bf698cae1324e0.svg",
+    "static/media/inventor.svg": "/static/media/inventor.8bff50162b9cb26d2ada03022c8d49da.svg",
+    "static/media/typescript.svg": "/static/media/typescript.a6305a733dd55243980aec55f96f70c5.svg",
     "index.html": "/index.html",
-    "main.9b3eedd2.css.map": "/static/css/main.9b3eedd2.css.map",
-    "main.d170a5dd.js.map": "/static/js/main.d170a5dd.js.map",
-    "453.ad7768ec.chunk.js.map": "/static/js/453.ad7768ec.chunk.js.map"
+    "main.345c36fb.css.map": "/static/css/main.345c36fb.css.map",
+    "main.a5d22abf.js.map": "/static/js/main.a5d22abf.js.map",
+    "453.eb941e0b.chunk.js.map": "/static/js/453.eb941e0b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b3eedd2.css",
-    "static/js/main.d170a5dd.js"
+    "static/css/main.345c36fb.css",
+    "static/js/main.a5d22abf.js"
   ]
 }
