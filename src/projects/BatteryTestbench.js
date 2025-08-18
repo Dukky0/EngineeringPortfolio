@@ -26,7 +26,7 @@ const BatteryTestbenchProject = ({ onNavigate }) => {
                 <h2>Project Overview</h2>
                 <p>
                   The Battery Discharge Testbench represents a critical safety and validation tool 
-                  for our electric motorcycle development process. Operating on an STM32 microcontroller 
+                  for our electric sport motorcycle development process. Operating on an STM32 microcontroller 
                   platform, this system provides automated discharge cycles with comprehensive data 
                   logging capabilities.
                 </p>
@@ -57,11 +57,11 @@ const BatteryTestbenchProject = ({ onNavigate }) => {
               </div>
               <div className="feature-card">
                 <h3>Safety Protocols</h3>
-                <p>Implemented multiple safety layers including overcurrent protection, thermal monitoring, emergency shutoff circuits, and isolated measurement systems.</p>
+                <p>Implemented multiple safety layers including overcurrent protection, thermal monitoring, and isolated measurement systems.</p>
               </div>
               <div className="feature-card">
                 <h3>Data Acquisition</h3>
-                <p>Real-time monitoring and logging of voltage, current, temperature, and power data with configurable sampling rates and export capabilities.</p>
+                <p>Real-time monitoring and logging of voltage, current, temperature, and power data with export capabilities.</p>
               </div>
             </div>
           </div>
@@ -77,12 +77,10 @@ const BatteryTestbenchProject = ({ onNavigate }) => {
                 <h2>Design Challenges</h2>
                 <p>
                   One of the primary challenges was managing high discharge currents while maintaining 
-                  measurement accuracy. The design incorporates precision shunt resistors, differential 
-                  amplification circuits, and careful PCB layout to minimize noise and ensure reliable operation.
+                  measurement accuracy. The design incorporates MCU control, Differential voltage measurement, and careful PCB layout to minimize noise and ensure reliable operation.
                 </p>
                 <p>
-                  Thermal management was another critical consideration, requiring heat sink design, 
-                  thermal vias, and temperature monitoring to prevent component damage during extended 
+                  Thermal management was another critical consideration, requiring active cooling, thermal vias, and temperature monitoring to prevent component damage during extended 
                   discharge cycles. The system includes automatic thermal shutdown protection.
                 </p>
               </div>
@@ -93,20 +91,12 @@ const BatteryTestbenchProject = ({ onNavigate }) => {
             <div className="single-column">
               <h2>Testing and Validation</h2>
               <p>
-                The testbench underwent extensive validation testing to ensure accuracy and safety. 
-                Calibration procedures were developed using precision reference standards, and the 
-                system was tested with various battery chemistries including lithium-ion, lithium 
-                polymer, and nickel-metal hydride configurations.
-              </p>
-              <p>
-                Performance testing demonstrated measurement accuracy within ±0.1% for voltage and 
-                ±0.5% for current across the full operating range. The data logging system successfully 
-                captured discharge characteristics for battery capacity verification and performance analysis.
+                The testbench will undergo extensive validation testing and be implemented as a tool to construct battery packs for the VT BOLT Dirtbike.
               </p>
             </div>
           </div>
 
-          <div className="content-section">
+          {/* <div className="content-section">
             <h2>Key Achievements</h2>
             <div className="achievement-grid">
               <div className="achievement-item">
@@ -125,7 +115,7 @@ const BatteryTestbenchProject = ({ onNavigate }) => {
                 <p>Multiple redundant safety systems including thermal, overcurrent, and emergency shutoff</p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="tech-stack">
             <h2>Technologies Used</h2>

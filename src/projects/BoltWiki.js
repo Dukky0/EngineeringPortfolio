@@ -89,7 +89,7 @@ const BOLTWikiProject = ({ onNavigate }) => {
             </div>
           </div>
 
-          <div className="content-section">
+          {/* <div className="content-section">
             <div className="single-column">
               <h2>Key Features</h2>
               <div className="features-list">
@@ -115,7 +115,7 @@ const BOLTWikiProject = ({ onNavigate }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="content-section">
             <h2>Development Challenges</h2>
@@ -137,41 +137,10 @@ const BOLTWikiProject = ({ onNavigate }) => {
 
           <div className="content-section">
             <h2>Impact & Results</h2>
-            <div className="impact-stats">
-              <div className="stat-card">
-                <div className="stat-number">25+</div>
-                <div className="stat-label">Active Team Members</div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-number">300+</div>
-                <div className="stat-label">Documentation Pages</div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-number">150+</div>
-                <div className="stat-label">Design Files Stored</div>
-              </div>
-              <div className="stat-card">
-                <div className="stat-number">95%</div>
-                <div className="stat-label">Team Adoption Rate</div>
-              </div>
-            </div>
             <p>
-              The wiki has significantly improved knowledge retention and team productivity. 
-              New team members can now onboard 60% faster by accessing structured documentation 
-              and historical project data. The centralized system has eliminated information silos 
-              and improved cross-subsystem collaboration.
+              Unfortunately the Wiki was never depolyed as the team ended up using canvas to not have to source paryment for hosting, but I gained valuable experience
+              with many different web development platforms.
             </p>
-          </div>
-
-          <div className="content-section">
-            <div className="single-column">
-              <h2>Future Enhancements</h2>
-              <p>
-                Planned improvements include integration with CAD software for automatic drawing 
-                updates, implementation of machine learning for content recommendations, and 
-                development of mobile applications for field access during testing and competition events.
-              </p>
-            </div>
           </div>
 
           <div className="tech-stack">
