@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 const eventsData = [
   {
-    title: 'Chip-Scale Integrations Bachelors',
+    title: 'Chip-Scale Integration Bachelor`s',
     company: 'Virginia Tech',
     startDate: '2024-08-27',
     endDate: 'Present',
